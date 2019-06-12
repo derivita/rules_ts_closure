@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@bazel/ibazel": "0.10.1",
+    "@bazel/buildifier": "0.22.0",
+    "@bazel/jasmine": "0.27.12",
+    "@bazel/karma": "0.27.12",
+    "@bazel/source-map-support": "0.5.9-c",
+    "@bazel/typescript": "0.28.0",
+    "@types/jasmine": "^2.8.2",
+    "@types/node":"^10.1.0",
+    "tsickle": "0.35.0",
+    "typescript": "3.4.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "lib": [
+            "dom",
+            "es6",
+            "dom.iterable",
+            "scripthost",
+            "esnext.array",
+            "esnext",
+            "esnext.asynciterable"
+        ]
+    }
+}
