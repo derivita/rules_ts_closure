@@ -57,7 +57,7 @@ def closure_ts_template_library(name, srcs, deps = [], visibility = None, **kwar
         name = name,
         srcs = [dtsfile],
         generate_externs = False,
-        deps = deps + ["//third_party/closure", jslib],
+        deps = deps + ["@com_derivita_rules_ts_closure//types:closure-library", jslib],
         visibility = visibility,
     )
 
@@ -76,7 +76,7 @@ def closure_ts_proto_library(name, visibility = None, **kwargs):
         name = name,
         srcs = [dtsfile],
         generate_externs = False,
-        deps = ["//third_party/closure", jslib],
+        deps = ["@com_derivita_rules_ts_closure//types:closure-library", jslib],
         visibility = visibility,
     )
 
