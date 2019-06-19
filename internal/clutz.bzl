@@ -37,7 +37,7 @@ clutz_gen_dts = rule(
             allow_single_file = True,
         ),
         "_clutz_externs": attr.label(
-            default = Label("//tools/typescript:incremental_clutz_externs.js"),
+            default = Label("//internal:incremental_clutz_externs.js"),
             allow_single_file = True,
         ),
     },
@@ -47,7 +47,7 @@ clutz_gen_dts = rule(
 def clutz_jszip_gen_dts(name, srcs, output):
     clutz_srcs = [
         "@io_angular_clutz//:src/resources/partial_goog_base.js",
-        "//tools/typescript:incremental_clutz_externs.js",
+        "//internal:incremental_clutz_externs.js",
     ]
     native.genrule(
         name = name,
@@ -65,7 +65,7 @@ def clutz_jszip_gen_dts(name, srcs, output):
                     --partialInput -o "$(@)" \
                     --skipEmitRegExp "$(location @io_angular_clutz//:src/resources/partial_goog_base.js)" \
                     "$(location @io_angular_clutz//:src/resources/partial_goog_base.js)" \
-                    "$(location //tools/typescript:incremental_clutz_externs.js)"
+                    "$(location //internal:incremental_clutz_externs.js)"
             rm -rf $(@D)/inputs 
         """,
     )
