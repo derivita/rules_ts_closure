@@ -17,12 +17,14 @@ install_rules_ts_closure_dependencies()
 load("@com_derivita_rules_ts_closure//:closure.bzl", "setup_rules_ts_closure_workspace")
 setup_rules_ts_closure_workspace()
 ```
-ca
+
 ## Design Overview
 https://docs.google.com/document/d/1Sq9c8NybsOzUy0EfoSc71469g-HWxRMAJx-ucfBqAGM/edit?usp=sharing
 
 ## Bazel hints
 If you're using gcc on Linux it may help to set the CC environment variable:
 export CC=gcc
+
+On Linux, you may need to install a JDK to get J2CL to work. e.g. `sudo apt-get install default-jdk`.
 
 If you're not using remote caching you might want to use the --disk_cache flag for bazel
