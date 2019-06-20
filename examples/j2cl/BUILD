@@ -6,8 +6,11 @@ load(
 )
 
 j2ts_library(
-  name="example-j2cl",
-  srcs=["Example.java"],
+    name = "example-j2cl",
+    srcs = ["Example.java"],
+    deps = [
+        "@com_google_j2cl//:jsinterop-annotations-j2cl",
+    ],
 )
 
 closure_ts_library(
