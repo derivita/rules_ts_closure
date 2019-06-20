@@ -3,7 +3,8 @@ load("@build_bazel_rules_nodejs//internal/common:node_module_info.bzl", "NodeMod
 # load("@build_bazel_rules_typescript//internal:common/compilation.bzl", "COMMON_ATTRIBUTES", "DEPS_ASPECTS", "compile_ts", "ts_providers_dict_to_struct")
 # load("@build_bazel_rules_typescript//internal:common/tsconfig.bzl", "create_tsconfig")
 load("@npm_bazel_typescript//internal:ts_config.bzl", "TsConfigInfo")
-load("@npm_bazel_typescript//internal:build_defs.bzl", "COMMON_ATTRIBUTES", "DEPS_ASPECTS", "compile_ts", "ts_providers_dict_to_struct", "tsc_wrapped_tsconfig")
+load("@npm_bazel_typescript//internal:common/compilation.bzl", "COMMON_ATTRIBUTES", "DEPS_ASPECTS", "compile_ts", "ts_providers_dict_to_struct")
+load("@npm_bazel_typescript//internal:build_defs.bzl", "tsc_wrapped_tsconfig")
 load("@io_bazel_rules_closure//closure:defs.bzl", "CLOSURE_JS_TOOLCHAIN_ATTRS", "create_closure_js_library")
 
 # TODO: share code with @npm_bazel_typescript//internal:build_defs.bzl.
