@@ -1,0 +1,11 @@
+steps:
+ # Use Bazel version 0.24
+ - name: gcr.io/cloud-builders/bazel@sha256:d0702e3f4849aedba784f98361fe79808a6e7b0f04bcf7360200f450aa4e21b0
+   args:
+     - build
+     - examples/...
+     - --test_output=errors
+     - --google_default_credentials
+     - --remote_http_cache=https://storage.googleapis.com/derivita-github-cloudbuild
+   timeout: 1800s
+timeout: 1800s
